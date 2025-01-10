@@ -17,3 +17,26 @@ test('get started link', async ({ page }) => {
   // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });
+
+
+//  Vitest test on playwright
+
+test.describe('App', () => {
+  test('should contain a button', async ({ page }) => {
+      await page.goto('http://localhost:5173/');
+
+      const button = await page.getByRole('button');
+
+      await expect(button).toBeVisible();
+  });
+
+  test('should count the clicks on the button', async ({page}) => {
+    await page.goto('http://localhost:5173/');
+
+    const button = await page.getByRole('button');
+
+    await button.click();
+
+    await expect(button).toHaveText('count is 1')
+  })
+});
