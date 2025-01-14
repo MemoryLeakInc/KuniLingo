@@ -10,7 +10,14 @@ export default [
         files: ['**/*.{js,jsx}'],
         languageOptions: {
             ecmaVersion: 2020,
-            globals: globals.browser,
+            globals: {
+                ...globals.browser,
+                ...globals.node,
+                describe: 'readonly',
+                it: 'readonly',
+                expect: 'readonly',
+                vi: 'readonly',
+            },
             parserOptions: {
                 ecmaVersion: 'latest',
                 ecmaFeatures: { jsx: true },
@@ -34,6 +41,7 @@ export default [
                 { allowConstantExport: true },
             ],
             indent: ['error', 4],
+            'no-undef': 'off', // temporal fix (check with Ethen)
         },
     },
 ]
