@@ -3,11 +3,11 @@ import './App.css'
 
 function App() {
 
-  return (
-    <>
-      <ExampleView />
-    </>
-  )
+    return (
+        <>
+            <ExampleView />
+        </>
+    )
 }
 
 export default App
