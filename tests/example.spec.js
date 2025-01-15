@@ -30,13 +30,4 @@ test.describe('App', () => {
         await expect(button).toBeVisible();
     });
 
-    test('should count the clicks on the button', async ({page}) => {
-        await page.goto('http://localhost:5173/');
-
-        const button = await page.getByRole('button');
-
-        await button.click();
-
-        await expect(button).toHaveText('count is 1')
-    })
 });

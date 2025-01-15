@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { ExampleComponent } from '../';
+import { ExampleComponent } from '../ExampleComponent.jsx';
+import '@testing-library/jest-dom';
 
 describe('ExampleComponent', () => {
     it('should render the button with the correct label', () => {
