@@ -1,7 +1,8 @@
 import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
-
+import en from './locale/en.json';
+import es from './locale/es.json';
 
 i18next
     .use(LanguageDetector)
@@ -15,18 +16,14 @@ i18next
         },
         resources: {
             en: {
-                translation: {
-                    welcome: "Welcome!",
-                    sectionText: "I'm a section",
-                    buttonLabel: "Click me",
-                },
+                translation:{
+                    ...en
+                }
             },
             es: {
-                translation: {
-                    welcome: "¡Bienvenido!",
-                    sectionText: "Soy una sección",
-                    buttonLabel: "Haz click aquí",
-                },
+                translation:{
+                    ...es
+                }
             },
         },
     });

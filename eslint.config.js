@@ -41,7 +41,7 @@ export default [
                 { allowConstantExport: true },
             ],
             indent: ['error', 4],
-            'no-undef': 'off', // temporal fix (check with Ethen)
         },
     },
 ]
+// 'no-undef': 'off', // temporal fix (check with Ethen)
