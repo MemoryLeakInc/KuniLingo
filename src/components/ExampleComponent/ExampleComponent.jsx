@@ -3,5 +3,6 @@ export const ExampleComponent = ({ onClick, label }) => {
         <button className='example-component' onClick={onClick}>
             {label}
         </button>
+        
     );
 };
