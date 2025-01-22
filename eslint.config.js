@@ -41,6 +41,8 @@ export default [
                 { allowConstantExport: true },
             ],
             indent: ['error', 4],
+            "react/prop-types": ["off"]
+            
         },
     },
 ]

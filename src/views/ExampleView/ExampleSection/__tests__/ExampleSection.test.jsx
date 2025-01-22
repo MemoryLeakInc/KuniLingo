@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { ExampleSection } from '../ExampleSection';
 import { expect } from 'vitest';
-import i18next from '../../../../i18n'
+import i18next from '../../../../i18n';
 import { I18nextProvider } from 'react-i18next';
 
 describe('ExampleSection component', () => {
