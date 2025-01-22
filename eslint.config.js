@@ -44,4 +44,3 @@ export default [
         },
     },
 ]
-// 'no-undef': 'off', // temporal fix (check with Ethen)
