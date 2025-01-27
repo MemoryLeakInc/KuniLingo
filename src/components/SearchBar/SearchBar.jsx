@@ -1,14 +1,18 @@
-export const SearchBar = ({ placeholder = "Search..." }) => {
+import { ButtonComponent } from "../ButtonComponent";
+import { InputComponent } from "../InputComponent";
+
+export const SearchBar = ({ placeholder = "Search...", onSearch, value, onInputChange }) => {
     return (
         <div className="search-bar">
-            <input
-                type="text"
+            <InputComponent
                 placeholder={placeholder}
+                value={value}
+                onChange={onInputChange}
             />
-            <button
-                className="button">
-                Search
-            </button>
+            <ButtonComponent
+                onClick={onSearch}
+                label="Search"
+            />
         </div>
-    )
-}
+    );
+};
