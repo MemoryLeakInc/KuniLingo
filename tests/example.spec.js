@@ -25,9 +25,19 @@ test.describe('App', () => {
     test('should contain a button', async ({ page }) => {
         await page.goto('http://localhost:5173/');
 
-        const button = await page.getByRole('button');
+        const button = await page.getByRole('button', {name: 'Click me'});
 
         await expect(button).toBeVisible();
     });
-
 });
+
+test.describe('App', () => {
+    test('should contain a search bar', async ({ page }) => {
+        await page.goto('http://localhost:5173/');
+
+        const searchBar = await page.getByRole('textbox', { name: /search/i });
+
+        await expect(searchBar).toBeVisible();
+    });
+});
+
