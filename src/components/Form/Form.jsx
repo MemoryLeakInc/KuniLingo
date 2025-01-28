@@ -1,3 +1,6 @@
+import { ButtonComponent } from "../ButtonComponent";
+
+
 export const Form = ({ fields = [], buttonText = "Submit", onSubmit }) => {
     
     const handleSubmit = (event) => {
@@ -23,12 +26,10 @@ export const Form = ({ fields = [], buttonText = "Submit", onSubmit }) => {
                     />
                 </div>
             ))}
-            <button
+            <ButtonComponent
                 type="submit"
-                className="form-button"
-            >
-                {buttonText}
-            </button>
+                label={buttonText}
+            />
         </form>
     )
 }
