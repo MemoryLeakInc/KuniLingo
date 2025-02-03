@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { SearchBar } from '../../../components/SearchBar';
 import { ButtonComponent } from '../../../components/ButtonComponent';
+import { TaskCard } from '../../../components/TaskCard';
 
 export const ExampleSection = () => {
     const { t } = useTranslation()
@@ -19,6 +20,8 @@ export const ExampleSection = () => {
             </div>
             <br></br>
             <SearchBar />
+            <br></br>
+            <TaskCard  taskName={"Make a card for tasks"} userName={"Vicente"}/>
         </div>
     );
 };
