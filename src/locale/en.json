@@ -1,4 +1,13 @@
 {
     "exampleView.exampleSection.description": "I'm a section",
-    "exampleView.exampleSection.buttonText": "Click me"
+    "exampleView.exampleSection.buttonText": "Click me",
+    "exampleView.exampleSection.taskCardTaskText": "Make a card for tasks",
+    "exampleView.taskCard.assignedToText": "Assigned to ",
+    "exampleTaskBoard.cardContainer.washTheFloor": "Wash the floor",
+    "exampleTaskBoard.cardContainer.changeCatSand": "Change cat's sand",
+    "exampleTaskBoard.cardContainer.cleanTheKitchen": "Clean the kitchen",
+    "exampleTaskBoard.cardContainer.cleanTheDust": "Clean the dust",
+    "exampleTaskBoard.cardContainer.washingMachine": "Put the washing machine",
+    "exampleTaskBoard.cardContainer.washTheDishes": "Wash the dishes"
+    
 }

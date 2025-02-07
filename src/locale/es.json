@@ -1,4 +1,12 @@
 {
     "exampleView.exampleSection.description": "Soy una sección",
-    "exampleView.exampleSection.buttonText": "Haz click aquí" 
+    "exampleView.exampleSection.buttonText": "Haz click aquí",
+    "exampleView.exampleSection.taskCardTaskText": "Hacer tarjeta para tareas",
+    "exampleView.taskCard.assignedToText": "Asignado a ",
+    "exampleTaskBoard.cardContainer.washTheFloor": "Fregar el suelo",
+    "exampleTaskBoard.cardContainer.changeCatSand": "Limpiar Arenero del gato",
+    "exampleTaskBoard.cardContainer.cleanTheKitchen": "Limpiar la cocina",
+    "exampleTaskBoard.cardContainer.cleanTheDust": "Quitar polvo comedor",
+    "exampleTaskBoard.cardContainer.washingMachine": "Poner la lavadora",
+    "exampleTaskBoard.cardContainer.washTheDishes": "Lavar los platos"
 }

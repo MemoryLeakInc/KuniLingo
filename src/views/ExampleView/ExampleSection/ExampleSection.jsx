@@ -21,7 +21,7 @@ export const ExampleSection = () => {
             <br></br>
             <SearchBar />
             <br></br>
-            <TaskCard  taskName={"Make a card for tasks"} userName={"Vicente"}/>
+            <TaskCard  taskName={t(`exampleView.exampleSection.taskText`)} userName={"Vicente"}/>
         </div>
     );
 };
