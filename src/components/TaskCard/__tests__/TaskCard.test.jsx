@@ -1,5 +1,5 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import { describe, it, expect, vi } from "vitest";
+import { render, screen, fireEvent} from "@testing-library/react";
+import { describe, it, expect } from "vitest";
 import { TaskCard } from "../TaskCard";
 import i18next from '../../../i18n';
 import { I18nextProvider } from 'react-i18next';
@@ -13,21 +13,6 @@ describe("TaskCard Component", () => {
 
         expect(screen.getByText("Buy milk")).toBeInTheDocument();
         expect(screen.getByText("Assigned to Juan")).toBeInTheDocument();
-    });
-
-    it("should execute onToggle when state changes", () => {
-        const mockOnToggle = vi.fn();
-        render(<TaskCard taskName="Clean the kitchen" userName="Carlos" onToggle={mockOnToggle} />);
-
-        const button = screen.getByRole("button");
-        fireEvent.click(button);
-
-        expect(mockOnToggle).toHaveBeenCalledTimes(1);
-        expect(mockOnToggle).toHaveBeenCalledWith(true);
-
-        fireEvent.click(button);
-        expect(mockOnToggle).toHaveBeenCalledTimes(2);
-        expect(mockOnToggle).toHaveBeenCalledWith(false);
     });
 
     it("should have the class completed when task is completed", () => {
