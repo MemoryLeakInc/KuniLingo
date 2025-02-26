@@ -1,10 +1,9 @@
 .progress-bar-container {
     width: 100%;
-    height: 20px;
+    height: 25px;
     background-color: #ddd;
-    border-radius: 10px;
+    border-radius: 12px;
     position: relative;
-    margin: 10px 0;
     overflow: hidden;
 }
 
@@ -12,10 +11,31 @@
     height: 100%;
     background-color: #4caf50;
     transition: width 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
 }
 
 .progress-text {
-    text-align: center;
     font-size: 14px;
-    margin-top: 5px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    text-align: center;
+}
+
+/* Si el progreso es muy bajo, cambiar el color del texto */
+.progress-bar:has(.progress-text) {
+    color: white;
+}
+
+/* Ajuste de texto cuando el progreso es menor al 20% */
+.progress-bar-container .progress-bar span {
+    color: white;
+}
+
+.progress-bar-container .progress-bar span:before {
+    content: attr(data-progress);
 }
