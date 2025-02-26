@@ -1,0 +1,27 @@
+
+.task-board {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.task-board .go-back-button {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.task-board .go-back-button:hover {
+    background: #0056b3;
+}
