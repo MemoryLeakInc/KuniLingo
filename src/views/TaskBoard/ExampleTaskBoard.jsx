@@ -3,26 +3,31 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { CardContainer } from "./CardContainer";
 import { ProgressBar } from "../../components/ProgressBar/ProgressBar";
+import "./ExampleTaskBoard.css"
 
 export const ExampleTaskBoard = () => {
     const initialTasks = [
-        { taskName: "Fregar el suelo", userName: "Vicente", completed: false},
-        { taskName: "Cambiar Arenero", userName: "Esther", completed: false},
-        { taskName: "Limpiar Cocina", userName: "Vicente", completed: false},
-        { taskName: "Quitar polvo comedor", userName: "Esther", completed: false},
-        { taskName: "Poner lavadora", userName: "Vicente", completed: false},
-        { taskName: "Lavar los platos", userName: "Vicente", completed: false},
+        { taskId: 1, taskName: "Fregar el suelo", userName: "Vicente", completed: false },
+        { taskId: 2, taskName: "Cambiar Arenero", userName: "Esther", completed: false },
+        { taskId: 3, taskName: "Limpiar Cocina", userName: "Vicente", completed: false },
+        { taskId: 4, taskName: "Quitar polvo comedor", userName: "Esther", completed: false },
+        { taskId: 5, taskName: "Poner lavadora", userName: "Vicente", completed: false },
+        { taskId: 6, taskName: "Lavar los platos", userName: "Vicente", completed: false },
     ];
+    
 
     const [tasks, setTasks] = useState(initialTasks);
 
-    const handleToggleTask = (index, newState) => {
-        const updatedTasks = [...tasks];
-        updatedTasks[index].completed = newState;
+    const handleToggleTask = (taskId, newState) => {
+        const updatedTasks = tasks.map(task =>
+            task.taskId === taskId ? { ...task, completed: newState } : task
+        );
         setTasks(updatedTasks)
     };
 
     const completedTasks = tasks.filter(task => task.completed).length;
+
+    const sortedTasks = [...tasks].sort((a, b) => a.completed - b.completed);
 
 
     return (
@@ -31,7 +36,7 @@ export const ExampleTaskBoard = () => {
                 <button>Go Back Home</button>
             </Link>
             <ProgressBar completedTasks={completedTasks} totalTasks={tasks.length} />
-            <CardContainer tasks={tasks} familyName={"Poteto"} onToggleTask={handleToggleTask}/>
+            <CardContainer tasks={sortedTasks} familyName={"Poteto"} onToggleTask={handleToggleTask}/>
         </div>
     );
 };
